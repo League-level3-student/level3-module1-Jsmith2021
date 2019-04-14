@@ -24,21 +24,62 @@ public class _01_IntroToArrayLists {
 		
 		//4. Print all the Strings using a for-each loop
 		for (String s:words) {
+			System.out.println(s);
+		}
 		//5. Print only the even numbered elements in the list.
-		System.out.println(words.size()-1);
-		System.out.println(words.size()-3);
+		for (int i = 0; i < words.size(); i++) {
+			String w = words.get(i);
+			if(i%2==0) {
+				System.out.println(words.get(i)+i);
+			}
+		}
 		
 		//6. Print all the Strings in reverse order.
-		System.out.println(s);
-		System.out.println(s);
-		System.out.println(s);
-		System.out.println(words.size()-1);
-		System.out.println(words.size());
+		for (int i = 0; i < words.size(); i++) {
+			String w= words.get(i);
+			if(i==4) {
+				System.out.println(words.get(i)+i);	
+			}
+		}
+			for (int i = 0; i < words.size(); i++) {
+				String w= words.get(i);
+				if(i==3) {
+					System.out.println(words.get(i)+i);	
+				}
+			}
+			for (int i = 0; i < words.size(); i++) {
+				String w= words.get(i);
+				if(i==2) {
+					System.out.println(words.get(i)+i);	
+				}
+			}
+			for (int i = 0; i < words.size(); i++) {
+				String w= words.get(i);
+				if(i==1) {
+					System.out.println(words.get(i)+i);	
+				}
+			}
+			for (int i = 0; i < words.size(); i++) {
+				String w= words.get(i);
+				if(i==0) {
+					System.out.println(words.get(i)+i);	
+				}
+			}
+			
+		
+		
+		
 		//7. Print only the Strings that have the letter 'e' in them.
-		if(words.equals("e")){
-			System.out.println(words);
+		for (int i = 0; i < words.size(); i++) {
+			String w = words.get(i);
+			if(i==1) {
+				System.out.println(words.get(i));
+			}
+			
 		}
-		}
+		
 		}
 	}
+
+	
 
