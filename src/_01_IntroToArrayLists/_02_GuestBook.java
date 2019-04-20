@@ -18,19 +18,20 @@ public class _02_GuestBook implements ActionListener{
 	// Guest #2: Sandy Summers
 	// Guest #3: Greg Ganders
 	// Guest #4: Donny Doners
-	JFrame frame= new JFrame();
+	JFrame frame= new JFrame("Guest List");
 	JPanel panel = new JPanel();
 	JButton button = new JButton("Add Name");
 	JButton button2 = new JButton("View Names");
-	
+	static ArrayList<String> guests= new ArrayList<String>();
+
 	public static void main(String[] args) {
 		new _02_GuestBook().createUI();
-		ArrayList<String> guests= new ArrayList<String>();
-		guests.add("Bob Banders");
+				guests.add("Bob Banders");
 		guests.add("Sandy Summers");
 		guests.add("Greg Ganders");
 		guests.add("Donny Doners");
-	}
+			
+		}
 	
 public void createUI() {
 	frame.add(panel);
@@ -38,16 +39,29 @@ public void createUI() {
 	frame.pack();
 	panel.add(button);
 	panel.add(button2);
+	button.addActionListener(this);
+	button2.addActionListener(this);
 }
-
 
 
 @Override
 public void actionPerformed(ActionEvent e) {
 	// TODO Auto-generated method stub
 	if(e.getSource()==button) {
-	String names=JOptionPane.showInputDialog("Enter a name");
+		String name=JOptionPane.showInputDialog(null, "Enter a name");
+		guests.add(name);
+		for (int i = 0; i < guests.size(); i++) {
+		String s=guests.get(i);
+		JOptionPane.showMessageDialog(null, "Guest #"+ i +" "+ s);
 		}
+		}
+	else if(e.getSource()==button2) {
+		for (int i = 0; i < guests.size(); i++) {
+			String s= guests.get(i);
+			JOptionPane.showMessageDialog(null, "Guest #"+ i + " "+ s);
+				
+			}
+	}
 	}
 	
 }
