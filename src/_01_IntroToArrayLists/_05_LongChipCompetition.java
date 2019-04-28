@@ -33,6 +33,10 @@ public class _05_LongChipCompetition {
 	public ArrayList<Beatle> getTheBand(){
 		return theBeatles;
 	}
+	
+	
+	for (int i = 0; i < theBeatles.size(); i++) {
+Beatle beatles= theBeatles.get(i);
 }
 
 class Beatle {
@@ -71,3 +75,4 @@ class Chip {
 		this.length = d;
 	}
 }
+
