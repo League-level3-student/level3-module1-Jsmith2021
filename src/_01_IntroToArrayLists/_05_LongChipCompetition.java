@@ -16,8 +16,20 @@ public class _05_LongChipCompetition {
 
 	public static void main(String[] args) {
 		_05_LongChipCompetition lcc = new _05_LongChipCompetition();
+		lcc.initializeBeatles();
+		for (int i = 0; i < lcc.theBeatles.size(); i++) {
+			Beatle beatle=lcc.theBeatles.get(i);
+			beatle.getChips().iterator();
+			System.out.println(beatle.getName());
+			}
+			
 		
-	}
+		//for (int i = 0; i < lcc.chips.size(); i++) {
+		//	Chip fries=lcc.chips.get(i);
+			
+		//}
+		}
+	
 	
 	private void initializeBeatles() {
 		Beatle george = new Beatle("George");
@@ -34,10 +46,6 @@ public class _05_LongChipCompetition {
 		return theBeatles;
 	}
 	
-	
-	for (int i = 0; i < theBeatles.size(); i++) {
-Beatle beatles= theBeatles.get(i);
-}
 
 class Beatle {
 	private String name;
@@ -74,5 +82,6 @@ class Chip {
 	Chip(double d) {
 		this.length = d;
 	}
+}
 }
 
