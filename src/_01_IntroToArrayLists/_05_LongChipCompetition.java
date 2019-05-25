@@ -28,8 +28,7 @@ public class _05_LongChipCompetition {
 				
 				if(longestChip>fries.getLength()) {
 					person=currentBeatle.getName();
-					System.out.println(person);
-					//longestChip=Chip.getLength();
+					longestChip=chipLengths.getLength();
 				}
 				}	
 			}
